@@ -2,7 +2,7 @@
   "name": "qq-wechat-emotion-parser",
   "version": "1.0.0",
   "description": "QQ、微信表情符号解析：字符串到图片URL",
-  "main": "./src/qq-wechat-emotion-parser.js",
+  "main": "./src/index.js",
   "directories": {
     "test": "test"
   },

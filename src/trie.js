@@ -5,7 +5,7 @@ function Trie(){
 
 Trie.prototype = {
     insert: function(str, pos){
-        if(str.length == 0) { 
+        if(str.length === 0) { 
             return;
         }
         var T = this;
@@ -69,12 +69,12 @@ Trie.prototype = {
         }
         return result;
     }
-}
+};
 
-if(module){
+if(typeof module !== 'undefined'){
     module.exports = Trie;
 }
-else if(window){
+else if(typeof window !== 'undefined'){
     window._qqWechatEmotionParser.Trie = Trie;
 }
 
