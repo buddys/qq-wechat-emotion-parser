@@ -1,13 +1,75 @@
 function Trie(){
+    this.words = 0;
+    this.children = new Array();
 }
 
-Trie.prototype.build = function(strs){
+Trie.prototype = {
+    insert: function(str, pos){
+        if(str.length == 0) { 
+            return;
+        }
+        var T = this;
+        var k;
+        var child;
 
-};
+        if(pos === undefined) {
+            pos = 0;
+        }
+        if(pos === str.length) {
+            T.words ++;
+            return;
+        }
+        k = str[pos];
+        if(T.children[k] === undefined){ 
+            T.children[k] = new Trie();
+        }
+        child = T.children[k];
+        child.insert(str, pos + 1);
+    },
 
-Trie.prototype.search = function(str){
-    return [[0,0]];
-};
+    build: function(arr){
+        var len = arr.length;
+        for(var i = 0; i < len; i++){
+            this.insert(arr[i], 0);
+        }
+    },
+
+    searchOne: function(str, pos){
+        if(pos === undefined){
+            pos = 0;
+        }
+        var T = this;
+        var child;
+        var k;
+        var result = new Array(0, 0);
+        k = str[pos];
+        child = T.children[k];
+        if(str.length === 0) return result;
+        if(child !== undefined){
+            return child.searchOne(str,  pos + 1);
+        }else{
+            return result;
+        }
+        if(!T.children){
+            result[0] = pos;
+            result[1] = T.words;
+            return searchResult;
+        }
+    },
+
+    search: function(str){
+        var len = str.length;
+        var result = new Array();
+        var tmp;
+        for(var i = 0; i < len - 3; i++){
+            tmp = searchOne(str, i);
+            if(tmp != [0, 0])
+                result.push(tmp);
+        }
+        return result;
+    }
+
+}
 
 if(module){
     module.exports = Trie;
