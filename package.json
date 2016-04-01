@@ -6,7 +6,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mocha": "^2.4.5"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "mocha"
@@ -21,7 +23,7 @@
     "表情"
   ],
   "author": "buddys, harttle, Meriky",
-  "license": "GPL",
+  "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/buddys/qq-wechat-emotion-parser/issues"
   },
