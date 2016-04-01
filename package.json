@@ -7,7 +7,16 @@
     "test": "test"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-merge": "^0.1.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-wrap": "^0.11.0"
+  },
   "scripts": {
     "test": "mocha"
   },
