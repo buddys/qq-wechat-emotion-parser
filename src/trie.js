@@ -1,6 +1,6 @@
 function Trie(){
     this.words = 0;
-    this.children = new Array();
+    this.children = [];
 }
 
 Trie.prototype = {
@@ -41,7 +41,7 @@ Trie.prototype = {
         var T = this;
         var child;
         var k;
-        var result = new Array(0, 0);
+        var result = [-1, -1];
         k = str[pos];
         child = T.children[k];
         if(str.length === 0) return result;
@@ -59,16 +59,16 @@ Trie.prototype = {
 
     search: function(str){
         var len = str.length;
-        var result = new Array();
+        var result = [];
         var tmp;
-        for(var i = 0; i < len - 3; i++){
-            tmp = searchOne(str, i);
-            if(tmp != [0, 0])
+        for(var i = 0; i < len - 1; i++){
+            tmp = this.searchOne(str, i);
+            if(tmp !== [-1, -1]){
                 result.push(tmp);
+            }
         }
         return result;
     }
-
 }
 
 if(module){

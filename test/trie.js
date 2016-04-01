@@ -8,10 +8,10 @@ describe('Trie', function() {
             trie.build([]);
         });
         it('should return [] for ""', function(){
-            assert.deepEqual([], trie.search(''));
+            assert.deepEqual(trie.search(''), []);
         });
         it('should return [] for "abcd"', function() {
-            assert.deepEqual([], trie.search('abcd'));
+            assert.deepEqual(trie.search('abcd'), []);
         });
     });
 
@@ -21,16 +21,16 @@ describe('Trie', function() {
             trie.build(['abc', 'abd']);
         });
         it('should return [] for ""', function() {
-            assert.deepEqual([], trie.search(''));
+            assert.deepEqual(trie.search(''), []);
         });
         it('should return [[0, 0]] for "abcd"', function() {
-            assert.deepEqual([ [0, 0] ], trie.search('abcd'));
+            assert.deepEqual(trie.search('abcd'), [ [0, 0] ]) ;
         });
         it('should return [[0, 0], [4 , 1]] for "abcdabd"', function() {
-            assert.deepEqual([ [0, 0], [4, 1] ], trie.search('abcdabd'));
+            assert.deepEqual(trie.search('abcdabd'), [ [0, 0], [4, 1] ]);
         });
         it('should return [[0, 0], [4 , 0]] for "abcdabcd"', function() {
-            assert.deepEqual([ [0, 0], [4, 0] ], trie.search('abcdabcd'));
+            assert.deepEqual(trie.search('abcdabcd'), [ [0, 0], [4, 0] ]);
         });
     });
 
@@ -40,10 +40,10 @@ describe('Trie', function() {
             trie.build(['aba']);
         });
         it('should return [[0, 0]] for "abab"', function() {
-            assert.deepEqual([[0, 0]], trie.search('abab'));
+            assert.deepEqual(trie.search('abab'), [[0, 0]]);
         });
         it('should return [[0, 0]] for "ababa"', function() {
-            assert.deepEqual([[0, 0]], trie.search('ababa'));
+            assert.deepEqual(trie.search('ababa'), [[0, 0]]);
         });
     });
 
@@ -53,10 +53,10 @@ describe('Trie', function() {
             trie.build(['/::)', '/::(']);
         });
         it('should return [[1, 0]] for "//::)/::x"', function() {
-            assert.deepEqual([ [1, 0] ], trie.search('//::)/::x'));
+            assert.deepEqual(trie.search('//::)/::x'), [ [1, 0] ] );
         });
         it('should return [[3, 1]] for "/::/::("', function() {
-            assert.deepEqual([ [3, 1] ], trie.search('/::/::('));
+            assert.deepEqual(trie.search('/::/::('), [ [3, 1] ] );
         });
     });
 });
