@@ -1,12 +1,12 @@
 var emotion_map, trie, emotion_list, Trie;
 
-if(module){
+if(typeof module !== 'undefined'){
     emotion_map = require('./emotions.json');
     Trie = require('./trie');
     build();
     module.exports = qqWechatEmotionParser;
 } 
-else if(window){
+else if(window !== 'undefined'){
     emotion_map = window._qqWechatEmotionParser.emotion_map;
     Trie = window._qqWechatEmotionParser.Trie;
     build();

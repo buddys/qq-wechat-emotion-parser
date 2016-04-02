@@ -78,12 +78,12 @@ Trie.prototype = {
         }
         return searchResult;
     }
-}
+};
 
-if(module){
+if(typeof module !== 'undefined'){
     module.exports = Trie;
 }
-else if(window){
+else if(typeof window !== 'undefined'){
     window._qqWechatEmotionParser.Trie = Trie;
 }
 
