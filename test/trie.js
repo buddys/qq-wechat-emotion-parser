@@ -59,4 +59,15 @@ describe('Trie', function() {
             assert.deepEqual(trie.search('/::/::('), [ [3, 1] ] );
         });
     });
+    describe('actural emotions: /::), /:<L>, /::(', function(){
+        var trie = new Trie();
+        beforeEach(function(){
+            trie.build(['/::)', '/:<L>', '/::(']);
+        });
+        it('should return [[14, 0], [37, 1]] for "I love gungou /::), and I fuck gungou/:<L>."', function() {
+            assert.deepEqual(trie.search('I love gungou /::), and I fuck gungou/:<L>.'), [ [14, 0], [37, 1] ] );
+        });
+    });
+        
+    
 });

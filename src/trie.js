@@ -7,7 +7,7 @@ function Trie(){
 
 Trie.prototype = {
     insert: function(str, pos, idx){
-        if(str.length == 0) { 
+        if(str.length === 0) { 
             return;
         }
         var T = this;
@@ -53,7 +53,7 @@ Trie.prototype = {
         if(child !== undefined && pos < str.length){
             return child.searchOne(str,  pos + 1);
         }
-        if(child == undefined && T.empty == 0) return result;
+        if(child === undefined && T.empty === 0) return result;
         if(T.empty == 1){
             result.arr[0] = pos - T.words;
             result.arr[1] = T.index;

@@ -7,11 +7,13 @@ window.qqWechatEmotionParser = function() {};
 
 !function(){function Trie(){
     this.words = 0;
-    this.children = [];
+    this.empty = 1;
+    this.index = 0;
+    this.children = {};
 }
 
 Trie.prototype = {
-    insert: function(str, pos){
+    insert: function(str, pos, idx){
         if(str.length === 0) { 
             return;
         }
@@ -23,21 +25,23 @@ Trie.prototype = {
             pos = 0;
         }
         if(pos === str.length) {
-            T.words ++;
+            T.index = idx;
             return;
         }
         k = str[pos];
         if(T.children[k] === undefined){ 
             T.children[k] = new Trie();
+            T.empty = 0;
+            T.children[k].words = this.words + 1;
         }
         child = T.children[k];
-        child.insert(str, pos + 1);
+        child.insert(str, pos + 1, idx);
     },
 
     build: function(arr){
         var len = arr.length;
         for(var i = 0; i < len; i++){
-            this.insert(arr[i], 0);
+            this.insert(arr[i], 0, i);
         }
     },
 
@@ -45,36 +49,41 @@ Trie.prototype = {
         if(pos === undefined){
             pos = 0;
         }
+        if(str.length === 0) return [-1];
         var T = this;
         var child;
         var k;
-        var result = [-1, -1];
+        var result = {};
+        result.arr = [];
         k = str[pos];
         child = T.children[k];
-        if(str.length === 0) return result;
-        if(child !== undefined){
+        if(child !== undefined && pos < str.length){
             return child.searchOne(str,  pos + 1);
-        }else{
+        }
+        if(child === undefined && T.empty === 0) return result;
+        if(T.empty == 1){
+            result.arr[0] = pos - T.words;
+            result.arr[1] = T.index;
+            result.words = T.words;
             return result;
         }
-        if(!T.children){
-            result[0] = pos;
-            result[1] = T.words;
-            return searchResult;
-        }
+        return result;
+
     },
 
     search: function(str){
+        if(this.empty == 1) return [];
         var len = str.length;
-        var result = [];
+        var searchResult = [];
         var tmp;
         for(var i = 0; i < len - 1; i++){
             tmp = this.searchOne(str, i);
-            if(tmp !== [-1, -1]){
-                result.push(tmp);
+            if(typeof tmp.arr !== 'undefined' && tmp.arr.length > 0){
+                searchResult.push(tmp.arr);
+                i += tmp.words;
             }
         }
-        return result;
+        return searchResult;
     }
 };
 
