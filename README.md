@@ -6,6 +6,7 @@
 #### example 1
 Input: 
 `/::)`
+
 Output:
 
 ```html
@@ -16,6 +17,7 @@ Display: ![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif)
 #### example 2
 Input: 
 `I xx Gunzi, /::), No no no, I just xx xx/::B.`
+
 Output:
 
 ```html
