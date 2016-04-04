@@ -24,7 +24,7 @@
 效果：
 
 ![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif)
-    
+ 
 #### example 2
 
 输入： 
@@ -75,25 +75,31 @@ I xx Gunzi, ![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gi
     
 2. 使用：
 
-```javascript
-var qqWechatEmotionParser = require('qq-wechat-emotion-parser');
+    ```javascript
+    var qqWechatEmotionParser = require('qq-wechat-emotion-parser');
 
-var text = 'I xx Gunzi /::), No no no, I just xx xx/:<L>.';
-var html = qqWechatEmotionParser(text);
+    var text = 'I xx Gunzi /::), No no no, I just xx xx/:<L>.';
+    var html = qqWechatEmotionParser(text);
 
-console.log(html);
-```
+    console.log(html);
+    ```
 
-## contribution
-### code
-任何人都可以通过Github提交issue或者贡献代码，贡献代码前需要仔细阅读原代码尽量保持代码风格一致。
-### emotion
+## Contribution
+
+### 贡献代码
+
+欢迎通过Github提交issue或者贡献代码，
+贡献代码前需要仔细阅读原代码尽量保持代码风格一致。
+
+### 新增标签
+
 表情在src/emotion.json文件下保存，通过编辑该json文件定义表情的字符表示以及图片源。需要注意以下两点：
 
 * 表情的字符表示应该尽量避免产生歧义
 * 图片托管应使用稳定，国内访问速度快的服务器
 
 ## License
+
 [GPL V3.0](http://www.gnu.org/licenses/gpl-3.0.html)
 
 Copyright (c) 2016 Buddys 
