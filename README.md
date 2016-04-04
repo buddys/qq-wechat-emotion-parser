@@ -1,64 +1,87 @@
 # QQ WechaT EmotioN ParseR
 
-## Intro
-嗯，这是一个很简单的小工具，作用是将网页中添加的QQ表情和或者微信表情字符串自动转化为表情图片，看下面两个例子：
+嗯，这是一个很简单的小工具，作用是将网页中添加的QQ表情和或者微信表情字符串转化为表情图片。
+
+* 快速！这是目前最快速的表情字符串转换JS库，使用[前缀树（Trie）][trie]实现，对于限长的表情库，算法复杂度达到O(n)。
+* 方便！无任何依赖，只需引入`min.js`即可使用。同时支持Node.js环境。
+
+## Demo
 
 #### example 1
-Input: 
-`/::)`
 
-Output:
+输入： 
+
+```
+/::)
+```
+
+输出：
 
 ```html
 <img src="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif" alt="/::)">
 ```
-Display: ![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif)
+
+效果：
+
+![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif)
     
 #### example 2
-Input: 
+
+输入： 
+
 `I xx Gunzi, /::), No no no, I just xx xx/::B.`
 
-Output:
+输出：
 
 ```html
 I xx Gunzi, <img src="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif" alt="/::)">, No no no, I just xx xx<img src="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/2.gif" alt="/::B">.
 ```
 
-Display:
+效果：
+
 I xx Gunzi, ![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif), No no no, I just xx xx![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/2.gif).
 
-特性如下：
-
-* 快速！
-* 高效！
-* 持久！
 
 ## Usage
-本工具对外暴露一个`qqWechatEmotionParser()`方法，此方法的输入是需要处理的字符串，输出是将字符表情转化为img标签的字符串。Parser采用前缀树实现，快！
+
+本工具对外暴露一个`qqWechatEmotionParser()`方法，此方法的输入是需要处理的字符串，输出是将字符表情转化为img标签的字符串。
+
 ### 浏览器环境
-看下面的示例：
 
-```javascript
-var text = 'I xx Gunzi /::), No no no, I just xx xx/:<L>.';
-var html = qqWechatEmotionParser(text);
+1. 下载并引入<https://github.com/buddys/qq-wechat-emotion-parser/blob/master/dist/qq-wechat-emotion-parser.min.js>。    
 
-document.write(text);
-document.write('<br/>')
-document.write(html);
-```
+    ```html
+    <script src="/path/to/qq-wechat-emotion-parser.min.js"></script>
+    ```
+
+2. 调用`window.qqWechatEmotionParser`：
+
+    ```javascript
+    var text = 'I xx Gunzi /::), No no no, I just xx xx/:<L>.';
+    var html = qqWechatEmotionParser(text);
+    
+    document.write(text);
+    document.write('<br/>')
+    document.write(html);
+    ```
+    
 ### Node环境
-示例如下：
+
+1. 安装：
+
+    ```bash
+    npm install qq-wechat-emotion-parser
+    ```
+    
+2. 使用：
 
 ```javascript
-
-var qqWechatEmotionParser = require('qqWechatEmotionParser.min.js');
+var qqWechatEmotionParser = require('qq-wechat-emotion-parser');
 
 var text = 'I xx Gunzi /::), No no no, I just xx xx/:<L>.';
 var html = qqWechatEmotionParser(text);
 
-console.log(text);
 console.log(html);
-
 ```
 
 ## contribution
@@ -75,4 +98,5 @@ console.log(html);
 
 Copyright (c) 2016 Buddys 
 
+[trie]: https://zh.wikipedia.org/zh-cn/Trie
 
