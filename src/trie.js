@@ -42,11 +42,11 @@ Trie.prototype = {
         if(pos === undefined){
             pos = 0;
         }
-        if(str.length === 0) return [-1];
+        var result = {};
+        if(str.length === 0) return result;
         var T = this;
         var child;
         var k;
-        var result = {};
         result.arr = [];
         k = str[pos];
         child = T.children[k];
@@ -61,7 +61,6 @@ Trie.prototype = {
             return result;
         }
         return result;
-
     },
 
     search: function(str){
@@ -73,7 +72,7 @@ Trie.prototype = {
             tmp = this.searchOne(str, i);
             if(typeof tmp.arr !== 'undefined' && tmp.arr.length > 0){
                 searchResult.push(tmp.arr);
-                i += tmp.words;
+                i = i + tmp.words - 1;
             }
         }
         return searchResult;
