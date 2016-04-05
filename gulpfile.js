@@ -19,7 +19,7 @@ gulp.task('clean-tmp', ['js'], function(){
 		.pipe(clean());
 });
 
-gulp.task('js', ['objectify-json'], function() {
+gulp.task('js', ['objectify-json', 'test'], function() {
     var srcs = ['./src/window.js', './dist/emotions.js', './src/trie.js',
         './src/index.js'
     ];
