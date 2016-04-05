@@ -58,8 +58,12 @@ describe('Trie', function() {
         it('should return [[3, 1]] for "/::/::("', function() {
             assert.deepEqual(trie.search('/::/::('), [ [3, 1] ] );
         });
+        it('should return [[0, 0], [4, 0], [8, 0]] for "/::)/::)/::)"', function() {
+            assert.deepEqual(trie.search('/::)/::)/::)'), [[0, 0], [4, 0], [8, 0]]);
+        });
     });
-    describe('actural emotions: /::), /:<L>, /::(', function(){
+
+    describe('many emotions: /::), /:<L>, /::(', function(){
         var trie = new Trie();
         beforeEach(function(){
             trie.build(['/::)', '/:<L>', '/::(']);
