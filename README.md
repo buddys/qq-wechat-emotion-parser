@@ -1,5 +1,9 @@
 # QQ WechaT EmotioN ParseR
 
+[![NPM version](https://img.shields.io/npm/v/qq-wechat-emotion-parser.svg?style=flat)](https://www.npmjs.org/package/qq-wechat-emotion-parser)
+[![Build Status](https://travis-ci.org/buddys/qq-wechat-emotion-parser.svg?branch=master)](https://travis-ci.org/buddys/qq-wechat-emotion-parser)
+[![Dependency manager](https://david-dm.org/buddys/qq-wechat-emotion-parser.png)](https://david-dm.org/buddys/qq-wechat-emotion-parser)
+
 嗯，这是一个很简单的小工具，作用是将网页中添加的QQ表情和或者微信表情字符串转化为表情图片。
 
 * 快速！这是目前最快速的表情字符串转换JS库，使用[前缀树（Trie）][trie]实现，对于限长的表情库，算法复杂度达到O(n)。
