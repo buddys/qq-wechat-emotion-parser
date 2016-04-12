@@ -106,7 +106,9 @@ I xx Gunzi, ![](https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gi
 
 [GPL V3.0](http://www.gnu.org/licenses/gpl-3.0.html)
 
-Copyright (c) 2016 Buddys 
+[harttle][harttle], [meriky][lsy] @ Buddys Copyright (c) 2016
 
+[lsy]: http://blog.lisongyi.com/
+[harttle]: http://harttle.com
 [trie]: https://zh.wikipedia.org/zh-cn/Trie
 
