@@ -2,6 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/qq-wechat-emotion-parser.svg?style=flat)](https://www.npmjs.org/package/qq-wechat-emotion-parser)
 [![Build Status](https://travis-ci.org/buddys/qq-wechat-emotion-parser.svg?branch=master)](https://travis-ci.org/buddys/qq-wechat-emotion-parser)
+[![Coverage Status](https://coveralls.io/repos/github/buddys/qq-wechat-emotion-parser/badge.svg?branch=master)](https://coveralls.io/github/buddys/qq-wechat-emotion-parser?branch=master)
 [![Dependency manager](https://david-dm.org/buddys/qq-wechat-emotion-parser.png)](https://david-dm.org/buddys/qq-wechat-emotion-parser)
 
 嗯，这是一个很简单的小工具，作用是将网页中添加的QQ表情和或者微信表情字符串转化为表情图片。
