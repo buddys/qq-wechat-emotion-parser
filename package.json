@@ -24,7 +24,7 @@
     "test": "gulp test",
     "dist": "gulp dist",
     "preversion": "npm test",
-    "version": "npm run dist",
+    "version": "npm run dist && git add dist",
     "postversion": "git push && git push --tags"
   },
   "repository": {

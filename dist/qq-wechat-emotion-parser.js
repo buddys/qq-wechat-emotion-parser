@@ -109,7 +109,6 @@ else if(window !== 'undefined'){
     build();
     window.qqWechatEmotionParser = qqWechatEmotionParser;
 }
-else return;
 
 function build(){
     emotion_list = keys(emotion_map);
