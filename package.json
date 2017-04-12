@@ -21,7 +21,11 @@
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "dist": "gulp dist",
+    "preversion": "npm test",
+    "version": "npm run dist",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
