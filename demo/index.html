@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>QQWechatEmotionParser</title>
+  <link rel="stylesheet" href="../src/emotion.css" type="text/css" />
   <script src="../dist/qq-wechat-emotion-parser.min.js"></script>
 </head>
 
 <body>
 
   <script>
-    var text = 'I love wiki /::), and I fuck wiki/:<L>.';
+    var text = 'I love wiki /::), and I fuck wiki/:<L>.[Yeah!]';
     var html = qqWechatEmotionParser(text);
     document.write(text);
     document.write('<br/>')
