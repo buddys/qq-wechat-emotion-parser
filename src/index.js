@@ -24,7 +24,7 @@ function qqWechatEmotionParser(str) {
     indices.reverse().map(function(idx) {
         var pos = idx[0],
             emotion = emotion_list[idx[1]],
-            img = '<img src="' + emotion_map[emotion] + '" alt="' + emotion + '">';
+            img = emotion_map[emotion].indexOf('class=') == -1 ? '<img src="' + emotion_map[emotion] + '" alt="' + emotion + '">' : emotion_map[emotion];
         str = splice(str, pos, emotion.length, img);
     });
     return str;

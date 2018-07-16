@@ -68,7 +68,7 @@ Trie.prototype = {
         var len = str.length;
         var searchResult = [];
         var tmp;
-        for(var i = 0; i < len - 1; i++){
+        for(var i = 0; i <= len - 1; i++){
             tmp = this.searchOne(str, i);
             if(typeof tmp.arr !== 'undefined' && tmp.arr.length > 0){
                 searchResult.push(tmp.arr);
