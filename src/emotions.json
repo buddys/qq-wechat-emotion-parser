@@ -98,5 +98,7 @@
   "/:kotow": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/96.gif",
   "/:turn": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/97.gif",
   "/:skip": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/98.gif",
-  "/:oY": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif"
+  "/:oY": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif",
+  ":smile:": "https://res.wx.qq.com/a/wx_fed/webwx/res/static/img/6AfH8-r.png",
+  ":mask:": "https://res.wx.qq.com/a/wx_fed/webwx/res/static/img/6AfH8-r.png"
 }
