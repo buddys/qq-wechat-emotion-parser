@@ -21,7 +21,7 @@ function build(){
 
 function qqWechatEmotionParser(str) {
     var indices = trie.search(str);
-    var labelEmotion = `<a title="{{title}}" style="background: url(https://res.wx.qq.com/a/wx_fed/webwx/res/static/img/6AfH8-r.png) no-repeat;width: 28px;
+    var labelEmotion = `<a title="{{title}}" style="display: inline-block;background: url(https://res.wx.qq.com/a/wx_fed/webwx/res/static/img/6AfH8-r.png) no-repeat;width: 28px;
     height: 28px; background-position:{{position}};"></a>`
     indices.reverse().map(function(idx) {
         var pos = idx[0],

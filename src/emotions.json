@@ -100,5 +100,9 @@
   "/:skip": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/98.gif",
   "/:oY": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif",
   ":smile:": "2px 2px",
-  ":mask:": "-30px 2px"
+  ":mask:": "-30px 2px",
+  ":joy:": "-62px 2px",
+  ":stuck_out_tongue_closed_eyes:": "-94px 2px",
+  ":flushed:": "-126px 2px",
+  ":scream:": "-158px 2px"
 }
