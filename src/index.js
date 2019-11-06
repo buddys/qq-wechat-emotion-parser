@@ -21,10 +21,12 @@ function build(){
 
 function qqWechatEmotionParser(str) {
     var indices = trie.search(str);
+    var labelEmotion = `<a title="{{title}}" style="display: inline-block;background: url(https://res.wx.qq.com/a/wx_fed/webwx/res/static/img/6AfH8-r.png) no-repeat;width: 28px;
+    height: 28px; background-position:{{position}};"></a>`
     indices.reverse().map(function(idx) {
         var pos = idx[0],
             emotion = emotion_list[idx[1]],
-            img = '<img src="' + emotion_map[emotion] + '" alt="' + emotion + '">';
+            img = /^:.*:$|^\[.*\]$/.test(emotion) ? labelEmotion.replace('{{title}}', emotion).replace('{{position}}', emotion_map[emotion]) : '<img src="' + emotion_map[emotion] + '" alt="' + emotion + '">';
         str = splice(str, pos, emotion.length, img);
     });
     return str;

@@ -98,5 +98,26 @@
   "/:kotow": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/96.gif",
   "/:turn": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/97.gif",
   "/:skip": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/98.gif",
-  "/:oY": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif"
+  "/:oY": "https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif",
+
+  ":smile:": "2px 2px",
+  ":mask:": "-30px 2px",
+  ":joy:": "-62px 2px",
+  ":stuck_out_tongue_closed_eyes:": "-94px 2px",
+  ":flushed:": "-126px 2px",
+  ":scream:": "-158px 2px",
+  ":pensive:": "-190px 2px",
+  ":unamused:": "-222px 2px",
+  "[Hey]": "-254px 2px",
+  "[Facepalm]": "-286px 2px",
+  "[Smirk]": "-318px 2px",
+  "[Smart]": "-350px 2px",
+  "[Concerned]": "-382px 2px",
+  "[Yeah!]": "-414px 2px",
+  ":ghost:": "-446px 2px",
+  ":pray:": "2px -30px",
+  ":muscle:": "-30px -30px",
+  ":tada:": "-62px -30px",
+  ":gift:": "-94px -30px",
+  "[Packet]": "-126px -30px"
 }
